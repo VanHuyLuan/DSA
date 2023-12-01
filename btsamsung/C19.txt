@@ -1,0 +1,14 @@
+Để tìm tất cả các cạnh khó (critical edges) trong một cây bao trùm nhỏ nhất của đồ thị, bạn có thể thực hiện các bước sau:
+
+1.Sử dụng Thuật toán Tarjan để tìm cầu (bridges):
+-Bắt đầu từ bất kỳ đỉnh nào trong đồ thị.
+-Sử dụng thuật toán Tarjan để duyệt đồ thị và đánh dấu các cạnh cầu (bridges). Các cạnh này là những cạnh mà nếu loại bỏ nó, đồ thị sẽ không còn liên thông.
+
+2. Sắp xếp các cầu theo trọng số:
+-Sau khi có danh sách các cầu, sắp xếp chúng theo trọng số tăng dần hoặc giảm dần.
+
+3. Tìm các cầu có trong cây bao trùm nhỏ nhất:
+-Xây dựng cây bao trùm nhỏ nhất bằng cách thêm cạnh theo thứ tự từ danh sách đã sắp xếp.
+-Mỗi khi thêm một cạnh, kiểm tra xem cây bao trùm có vẫn là liên thông không.
+-Nếu cây bao trùm mất tính liên thông sau khi thêm cạnh, cạnh đó là cạnh khó.
++Những cạnh khó là những cạnh mà nếu xóa nó, cây bao trùm nhỏ nhất sẽ bị chia thành ít nhất hai thành phần liên thông

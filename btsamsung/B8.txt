@@ -1,0 +1,8 @@
+Thuật toán sau không đảm bảo cho kết quả là một thứ tự tô pô: Chạy BFS, đánh dấu mỗi đỉnh theo khoảng cách tăng dần tới đỉnh nguồn của nó.vì:
+- Sự phụ thuộc vào cạnh ngắn nhất: 
++ Trong BFS, các đỉnh được thăm theo cấp số nhân. Tức là, trước tiên, ta thăm tất cả các đỉnh có khoảng cách 1, sau đó là các đỉnh có khoảng cách 2, và tiếp tục như vậy. Điều này không chắc chắn rằng chúng ta sẽ có một thứ tự tô pô hợp lệ vì có thể có các đỉnh ở cùng một cấp độ nhưng không phải là lá của cây DFS.
+- Không kiểm soát sự sắp xếp giữa các đỉnh cùng cấp: 
++ Trong một số trường hợp, có thể có nhiều đỉnh cùng cấp (cùng khoảng cách từ đỉnh nguồn), và BFS không đảm bảo sự sắp xếp cụ thể giữa chúng. Do đó, không thể đảm bảo rằng chúng sẽ được thêm vào thứ tự tô pô theo đúng thứ tự.
+- Thứ tự của các đỉnh ở cùng một cấp độ không xác định: 
++ BFS chỉ đảm bảo rằng các đỉnh ở cùng một cấp độ sẽ được thăm trước các đỉnh ở cấp độ tiếp theo, nhưng không xác định thứ tự giữa chúng. Điều này có thể dẫn đến nhiều thứ tự tô pô khác nhau.
+=> Để đảm bảo một thứ tự tô pô hợp lệ, bạn cần sử dụng thuật toán tìm kiếm theo chiều sâu (DFS), cung cấp một thứ tự cụ thể khi thăm các đỉnh

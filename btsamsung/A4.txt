@@ -1,0 +1,9 @@
+- Gỉa sử đồ thị G là đồ thị hai màu và chứa một chu trình đồ thị lẻ C
+- Ta chia các đỉnh của chu trìnhC thành hai mầu: mầu 1 và mầu 2 theo thứ tự.
+- Bởi vì C là chu trình, nên đỉnh cuối cùng của C kề với đỉnh đầu tiên của C.
+- Đỉnh cuối cùng và đỉnh đầu tiên của C thuộc hai mầu khác nhau (theo cách chia ở bước 2).
+- Nhưng bây giờ, nói chung, các đỉnh kề nhau trong chu trình C phải thuộc cùng một mầu (theo cách xây dựng chu trình).
+- Điều này tạo ra mâu 1 và mâu 2 của đỉnh cuối cùng và đỉnh đầu tiên của C cùng một mầu, điều này mâu 1 và mâu 2 là giống nhau.
+- Do đó, giả sử đầu tiên (đồ thị hai mầu và chứa chu trình độ dài lẻ) là không đúng, và ta chứng minh được rằng
+nếu một đồ thị có chu trình độ dài lẻ thì nó không thể là đồ thị hai mầu.
+=> Như vậy, ta có thể kết luận rằng một đồ thị là đồ thị hai mầu khi và chỉ khi nó không chứa chu trình độ dài lẻ.

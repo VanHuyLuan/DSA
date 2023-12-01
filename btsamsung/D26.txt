@@ -1,0 +1,25 @@
+Ta có thể sử dụng thuật toán Dijkstra.
+1. Xây dựng đồ thị mới:
+- Cho một đồ thị có hướng G với các trọng số không âm tại các đỉnh.
+- Tạo một đồ thị mới G' với các đỉnh giống hệt nhau nhưng cạnh giữa hai đỉnh được xác định bởi trọng số của đỉnh nguồn đến đỉnh đích trong đồ thị cũ.
+
+2. Chứng minh tồn tại duy nhất một đường đi ngắn nhất:
+- Giả sử có hai đường đi ngắn nhất từ một đỉnh nguồn đến một đỉnh đích trong đồ thị G'.
+- Điều này ngụ ý rằng có ít nhất hai đường đi ngắn nhất từ đỉnh nguồn đến đỉnh đích trong đồ thị G (vì nếu có độ dài bằng nhau, thì cả hai đều là đường đi ngắn nhất).
+- Tuy nhiên, điều này phủ định giả định của chúng ta rằng trong G có thể có nhiều hơn một đường đi ngắn nhất.
+
+3. Áp dụng thuật toán Dijkstra trên G'.
+- Áp dụng thuật toán Dijkstra trên đồ thị mới G'.
+- Kết quả của thuật toán này là các đường đi ngắn nhất từ đỉnh nguồn đến tất cả các đỉnh khác trong G'.
+
+4. Quay lại đồ thị ban đầu:
+
+- Khi thuật toán Dijkstra trả về kết quả, chúng ta có thể sử dụng nó để xác định các đường đi ngắn nhất trong G.
+- Điều này đơn giản bằng cách xem xét các cạnh trong đồ thị ban đầu G và tìm trọng số của đỉnh nguồn đến đỉnh đích tương ứng trong G'.
+
+Chứng minh kết quả:
+-Tính chất của thuật toán Dijkstra:
++ Thuật toán Dijkstra đảm bảo rằng nó sẽ tìm ra các đường đi ngắn nhất từ đỉnh nguồn đến tất cả các đỉnh khác trong đồ thị.
++ Do trọng số cạnh là không âm, không có chu trình âm, và nó sẽ không bao giờ "quay lại" một đỉnh nếu đã đi qua.
+-Tính duy nhất của đường đi ngắn nhất:
++ Do thuật toán Dijkstra đảm bảo tính duy nhất của đường đi ngắn nhất, ta có thể chắc chắn rằng chỉ có một đường đi ngắn nhất từ đỉnh nguồn đến mọi đỉnh khác trong G.

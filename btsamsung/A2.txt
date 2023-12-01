@@ -1,0 +1,1 @@
+Số đồ thị vô hướng khác nhau có V đỉnh và E cạnh(không có cạnh song song) là 2^(VC2).

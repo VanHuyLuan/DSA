@@ -1,0 +1,2 @@
+-Số lượng đồ thị có hướng phi chu trình chứa V đỉnh là tổng của số lượng đồ thị có hướng có các tập hợp con của V đỉnh từ 1 đến V. 
+-Mỗi tập hợp con k đỉnh (với 1≤k≤V) tạo ra Bk đồ thị, và tổng của chúng là số lượng đồ thị chứa V đỉnh.

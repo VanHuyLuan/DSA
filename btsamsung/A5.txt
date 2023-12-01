@@ -1,0 +1,16 @@
+1. Giả sử đồ thị không có điểm articulation.
+-Điều này có nghĩa là có ít nhất một cặp đỉnh mà khi loại bỏ điểm articulation, đồ thị trở thành không liên thông.
+-Chọn một cặp đỉnh u và v và một đường đi giữa chúng sau khi loại bỏ điểm articulation (gọi đường đi này là P).
+-Vì đồ thị trở thành không liên thông khi loại bỏ điểm articulation, nên có ít nhất một đỉnh không thuộc P trên đường đi từ u đến v hoặc ngược lại.
+
+2. Xây dựng hai đường đi không giao nhau.
+-Chọn đỉnh u và v từ bước trước và chọn một đỉnh không thuộc P (đỉnh này không bị loại bỏ khi loại bỏ điểm articulation). Gọi đỉnh này là w.
+-Xây dựng hai đường đi:
+   +Đường đi thứ nhất từ u đến w trên đồ thị ban đầu.
+   +Đường đi thứ hai từ w đến v trên đồ thị ban đầu.
+
+3. Chứng minh tính biconnected.
+-Hai đường đi trên không giao nhau vì đỉnh w không thuộc đường đi P.
+-Đồ thị không bị chia thành hai phần khi loại bỏ bất kỳ đỉnh nào, vì có ít nhất một đường đi giữa mỗi cặp đỉnh không chứa đỉnh articulation.
+-Do đó, đồ thị không có điểm articulation là một đồ thị biconnected.
+=> Vậy nên, nếu một đồ thị không có điểm articulation, nó là một đồ thị biconnected.
